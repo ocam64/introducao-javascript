@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<script>
+    function pulalinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function leia(frase) {
+        document.write(frase);
+        pulalinha();
+    }
+
+    function calculaImc(altura, peso){
+        return  peso / (altura * altura);
+
+    }
+
+    var nome = prompt("Informe o seu nome: ");
+
+    var alturaInformada = prompt(nome + ", informe a  sua  altura: ");
+
+    var pesoInformado = prompt(nome + ", informe o seu peso: ");
+
+    var imc = calculaImc(alturaInformada, pesoInformado);
+
+    leia("O seu IMC é " + imc .toFixed(1));
+
+    if(imc < 18.5) {
+        leia(nome + ", Você está abaixo do  peso.");
+
+    }
+
+    if(imc >= 18.5 && imc <= 24.9) {
+        leia(nome + ", Você está com peso recomendado.");
+    }
+
+    if(imc >= 25 && imc <= 29.9) {
+        leia(nome + ", Você  está com sobre peso!")
+
+    }
+
+    if(imc >= 30 && imc <= 34.9) {
+        leia(nome + ", Você está com obesidade classe 1");
+
+    }
+
+    if(imc >= 35 && imc <= 39.9) {
+        leia(nome + ", Você está com obesidade classe 2");
+
+    }
+
+    if(imc > 40) {
+        leia(nome  + ", Você está com obesidade classe 3");
+    }
+
+</script>
